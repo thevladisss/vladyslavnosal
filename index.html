@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vladyslav Nosal</title>
+</head>
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 120px;
+        margin: 0 auto;
+        width: min(95%, 500px);
+    }
+
+    section img {
+        margin-top: 20px;
+        width: 400px;
+        max-width: 95%;
+        display: block;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    .stack-list {
+        display: inline-flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        overflow: auto;
+    }
+
+    .stack-list li {
+        list-style: none;
+    }
+
+    .stack-list li img {
+        height: 42px;
+        width: 42px;
+        filter: grayscale(0.5);
+        opacity: 0.5;
+        transition: all 0.3s ease;
+    }
+
+    .stack-list li img:hover {
+        opacity: 1;
+        filter: grayscale(1);
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    .links-list li {
+        list-style: none;
+        text-decoration: underline;
+    }
+
+    .links-list li:hover {
+        cursor: pointer;
+        color: blue
+    }
+
+    .links-list li:not(li:first-of-type) {
+        margin-top: 2px;
+    }
+
+    .articles-list > p {
+        text-align: center;
+    }
+
+    .contributions-list > p {
+        text-align: center;
+    }
+</style>
+<body>
+    <section>
+        <code> Hi! My name is <strong>Vladyslav Nosal</strong></code>
+        <img src="public/me.jpeg" alt="Vladyslav Nosal">
+        <ul class="stack-list">
+            <li>
+                <img src="public/stack/js.png" alt="nuxt">
+            </li>
+           <li>
+               <img src="public/stack/html.png" alt="nuxt">
+           </li>
+            <li>
+                <img src="public/stack/css.png" alt="nuxt">
+            </li>
+            <li>
+                <img src="public/stack/vue.png" alt="nuxt">
+            </li>
+            <li>
+                <img src="public/stack/react.png" alt="nuxt">
+            </li>
+            <li>
+                <img src="public/stack/nuxt.png" alt="nuxt">
+            </li>
+            <li>
+                <img src="public/stack/npm.png" alt="nuxt">
+            </li>
+            <li>
+                <img src="public/stack/php.png" alt="nuxt">
+            </li>
+            <li>
+                <img src="public/stack/node.png" alt="nuxt">
+            </li>
+        </ul>
+        <ul class="links-list">
+            <li>
+                <a target="_blank" href="public/CV.pdf">
+                    <code>
+                        Resume
+                    </code>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://linkedin.com/in/vladissick">
+                    <code>
+                        Linkedin
+                    </code>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://github.com/thevladisss">
+                    <code>
+                        Github
+                    </code>
+                </a>
+            </li>
+        </ul>
+        <ul class="contributions-list">
+            <p>Contributions</p>
+            <li>
+                <a href="https://github.com/cypress-io/cypress/issues/29665">
+                    Implement correct behavior for all input types supporting arrow up (stepUp) and arrow down (stepDown)
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/cypress-io/cypress/issues/29611">
+                    Typing {{arrowUp}} should trigger event on input[type=number]
+                </a>
+            </li>
+        </ul>
+        <ul class="articles-list">
+            <p>Articles</p>
+            <li>
+                <a target="_blank" href="https://dou.ua/forums/topic/47229/">
+                    <code>
+                        Vue.js multilaye
+                    </code>
+                </a>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
