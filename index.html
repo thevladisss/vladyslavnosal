@@ -7,21 +7,87 @@
     <title>Vladyslav Nosal</title>
 </head>
 <style>
-    section {
+    body > div#container {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 120px;
-        margin: 0 auto;
-        width: min(95%, 500px);
+        justify-content: space-between;
+        gap: 20px;
+        width: min(100%, 900px);
+        margin: auto;
     }
 
-    section img {
+    @media screen and (max-width: 900px) {
+        body > div#container {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+
+    section:first-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 20px;
+        width: min(95%, 500px);
+        text-align: center;
+    }
+
+    section:first-child > div:first-child  {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        width: 52px;
+        padding: 8px;
+    }
+
+    @media screen and (max-width: 900px) {
+        section:first-child {
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        section:first-child > div:first-child {
+            display: none;
+            order: 2;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .stack-list {
+            flex-wrap: nowrap;
+            overflow: scroll;
+        }
+
+        .stack-list li {
+           display: inline;
+            width: 52px;
+        }
+
+
+        section:first-child > div:last-child {
+            order: 1;
+        }
+
+    }
+
+
+    section:first-child img {
         margin-top: 20px;
         width: 400px;
         max-width: 95%;
         display: block;
+    }
+
+    section:first-child > div:last-child code {
+       margin-top: 12px;
+        display: block;
+        text-align: center;
+    }
+
+    section:last-child {
+        text-align: end;
     }
 
     ul {
@@ -29,9 +95,6 @@
     }
 
     .stack-list {
-        display: inline-flex;
-        justify-content: center;
-        flex-wrap: wrap;
         gap: 16px;
         overflow: auto;
     }
@@ -73,89 +136,140 @@
         text-align: center;
     }
 
+    .articles-list li {
+        list-style: none;
+    }
+
     .contributions-list > p {
-        text-align: center;
+        text-align: end;
+    }
+
+    .contributions-list li {
+        list-style: none;
+    }
+
+    .review-container {
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+    }
+
+    h4 {
+        font-size: 20px;
     }
 </style>
 <body>
-    <section>
-        <code> Hi! My name is <strong>Vladyslav Nosal</strong></code>
-        <img src="public/me.jpeg" alt="Vladyslav Nosal">
-        <ul class="stack-list">
-            <li>
-                <img src="public/stack/js.png" alt="nuxt">
-            </li>
-           <li>
-               <img src="public/stack/html.png" alt="nuxt">
-           </li>
-            <li>
-                <img src="public/stack/css.png" alt="nuxt">
-            </li>
-            <li>
-                <img src="public/stack/vue.png" alt="nuxt">
-            </li>
-            <li>
-                <img src="public/stack/react.png" alt="nuxt">
-            </li>
-            <li>
-                <img src="public/stack/nuxt.png" alt="nuxt">
-            </li>
-            <li>
-                <img src="public/stack/npm.png" alt="nuxt">
-            </li>
-            <li>
-                <img src="public/stack/php.png" alt="nuxt">
-            </li>
-            <li>
-                <img src="public/stack/node.png" alt="nuxt">
-            </li>
-        </ul>
-        <ul class="links-list">
-            <li>
-                <a target="_blank" href="public/CV.pdf">
-                    <code>
-                        Resume
-                    </code>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="https://linkedin.com/in/vladissick">
-                    <code>
-                        Linkedin
-                    </code>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="https://github.com/thevladisss">
-                    <code>
-                        Github
-                    </code>
-                </a>
-            </li>
-        </ul>
-        <ul class="contributions-list">
-            <p>Contributions</p>
-            <li>
-                <a href="https://github.com/cypress-io/cypress/issues/29665">
-                    Implement correct behavior for all input types supporting arrow up (stepUp) and arrow down (stepDown)
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/cypress-io/cypress/issues/29611">
-                    Typing {{arrowUp}} should trigger event on input[type=number]
-                </a>
-            </li>
-        </ul>
-        <ul class="articles-list">
-            <p>Articles</p>
-            <li>
-                <a target="_blank" href="https://dou.ua/forums/topic/47229/">
-                    <code>
-                        Vue.js multilaye
-                    </code>
-                </a>
-            </li>
-        </ul>
-    </section>
+    <div id="container">
+        <section>
+            <div>
+                <ul class="stack-list">
+                    <li>
+                        <img src="public/stack/js.png" alt="nuxt">
+                    </li>
+                    <li>
+                        <img src="public/stack/html.png" alt="nuxt">
+                    </li>
+                    <li>
+                        <img src="public/stack/css.png" alt="nuxt">
+                    </li>
+                    <li>
+                        <img src="public/stack/vue.png" alt="nuxt">
+                    </li>
+                    <li>
+                        <img src="public/stack/react.png" alt="nuxt">
+                    </li>
+                    <li>
+                        <img src="public/stack/nuxt.png" alt="nuxt">
+                    </li>
+                    <li>
+                        <img src="public/stack/npm.png" alt="nuxt">
+                    </li>
+                    <li>
+                        <img src="public/stack/php.png" alt="nuxt">
+                    </li>
+                    <li>
+                        <img src="public/stack/node.png" alt="nuxt">
+                    </li>
+                </ul>
+            </div>
+           <div>
+               <img src="public/me.jpeg" alt="Vladyslav Nosal">
+               <h1>
+                   Software Engineer
+               </h1>
+               <code> Hi! My name is <strong>Vladyslav Nosal</strong></code>
+               <div class="review-container">
+               <button id="btn-leave-review">
+                   Worked with me? Leave a review!
+                </button>
+               </div>
+               <div>
+                   <code>
+                       JS, TS, React.js, Vue.js, Node.js
+                   </code>
+               </div>
+           </div>
+        </section>
+        <section>
+           <div class="links-container">
+               <h4>
+                   Links
+               </h4>
+               <ul class="links-list">
+                   <li>
+                       <a target="_blank" href="public/CV.pdf">
+                           <code>
+                               Resume
+                           </code>
+                       </a>
+                   </li>
+                   <li>
+                       <a target="_blank" href="https://linkedin.com/in/vladissick">
+                           <code>
+                               Linkedin
+                           </code>
+                       </a>
+                   </li>
+                   <li>
+                       <a target="_blank" href="https://github.com/thevladisss">
+                           <code>
+                               Github
+                           </code>
+                       </a>
+                   </li>
+               </ul>
+           </div>
+            <div class="contributions-container">
+                <h4>Contributions</h4>
+                <ul class="contributions-list">
+                    <li>
+                        <a href="https://github.com/cypress-io/cypress/issues/29665">
+                            Implement correct behavior for all input types supporting arrow up (stepUp) and arrow down (stepDown)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/cypress-io/cypress/issues/29611">
+                            Typing {{arrowUp}} should trigger event on input[type=number]
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="articles-container">
+                <h4>Articles</h4>
+                <ul class="articles-list">
+                    <li>
+                        <a target="_blank" href="https://dou.ua/forums/topic/47229/">
+                            <code>
+                                Vue.js multilayer architecture
+                            </code>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script>
+        // document.getElementById('btn-leave-review').onclick = () => {}
+    </script>
 </body>
 </html>
